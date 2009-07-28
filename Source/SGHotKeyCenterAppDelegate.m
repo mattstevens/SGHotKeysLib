@@ -18,10 +18,18 @@ NSString *kGlobalHotKey = @"Global Hot Key";
 @synthesize resultsTextField;
 @synthesize hotKey;
 
+- (void)dealloc {
+  [window release];
+  [hotKeyControl release];
+  [resultsTextField release];
+  [hotKey release];
+  [super dealloc];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)theNotification {
 	[[SGHotKeyCenter sharedCenter] unregisterHotKey:hotKey];	
   id keyComboPlist = [[NSUserDefaults standardUserDefaults] objectForKey:kGlobalHotKey];
-	SGKeyCombo *keyCombo = [[SGKeyCombo alloc] initWithPlistRepresentation:keyComboPlist];
+	SGKeyCombo *keyCombo = [[[SGKeyCombo alloc] initWithPlistRepresentation:keyComboPlist] autorelease];
 	hotKey = [[SGHotKey alloc] initWithIdentifier:kGlobalHotKey keyCombo:keyCombo target:self action:@selector(hotKeyPressed:)];
 	[[SGHotKeyCenter sharedCenter] registerHotKey:hotKey];
 	[hotKeyControl setKeyCombo:SRMakeKeyCombo(hotKey.keyCombo.keyCode, [hotKeyControl carbonToCocoaFlags:hotKey.keyCombo.modifiers])];

@@ -16,7 +16,7 @@ SGHotKeysLib does the following:
 * Adopts Objective-C 2.0 syntax, properties and other language features (suck it dot syntax haters)
 * Uses Leopard's Text Input Sources (no patching required)
 * Runs natively in 64 bit
-* Requires Garbage Collection
+* Supports Garbage Collection
 * Removes legacy code support (no more checking for 10.1, no more Project Builder)
 * Cleans up the code formatting & variable declarations
 * Puts the code on Github for hot forking action

@@ -17,7 +17,10 @@
   static SGKeyCodeTranslator *currentTranslator = nil;
   TISInputSourceRef currentKeyboardLayout = TISCopyCurrentKeyboardInputSource();
   
-  if (currentTranslator == nil || [currentTranslator keyboardLayout] != currentKeyboardLayout) {
+  if (currentTranslator == nil) {
+    currentTranslator = [[SGKeyCodeTranslator alloc] initWithKeyboardLayout:currentKeyboardLayout];
+  } else if ([currentTranslator keyboardLayout] != currentKeyboardLayout) {
+    [currentTranslator release];
     currentTranslator = [[SGKeyCodeTranslator alloc] initWithKeyboardLayout:currentKeyboardLayout];
   }
   

@@ -26,6 +26,11 @@ static OSStatus hotKeyEventHandler(EventHandlerCallRef inHandlerRef, EventRef in
 
 @implementation SGHotKeyCenter
 
+- (void)dealloc {
+  [hotKeys release];
+  [super dealloc];
+}
+
 + (SGHotKeyCenter *)sharedCenter {
   static SGHotKeyCenter *sharedCenter = nil;
   

@@ -18,6 +18,14 @@
 @synthesize action;
 @synthesize hotKeyID;
 
+- (void)dealloc {
+  [identifier release];
+  [name release];
+  [keyCombo release];
+  [target release];
+  [super dealloc];
+}
+
 - (id)init {
   return [self initWithIdentifier:nil keyCombo:nil target:nil action:nil];
 }

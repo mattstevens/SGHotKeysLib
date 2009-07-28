@@ -23,7 +23,7 @@ NSString * const kModifiersDictionaryKey = @"modifiers";
 }
 
 + (id)keyComboWithKeyCode:(NSInteger)theKeyCode modifiers:(NSInteger)theModifiers {
-  return [[self alloc] initWithKeyCode:theKeyCode modifiers:theModifiers];
+  return [[[self alloc] initWithKeyCode:theKeyCode modifiers:theModifiers] autorelease];
 }
 
 
