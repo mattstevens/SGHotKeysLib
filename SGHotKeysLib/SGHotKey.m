@@ -27,9 +27,17 @@
 }
 
 - (id)init {
-  return [self initWithIdentifier:nil keyCombo:nil target:nil action:nil];
+  return [self initWithIdentifier:nil keyCombo:nil];
 }
 
+- (id)initWithIdentifier:(id)theIdentifier keyCombo:(SGKeyCombo *)theCombo {
+  if (self = [super init]) {
+    self.identifier = theIdentifier;
+    self.keyCombo = theCombo;
+  }
+  
+  return self;  
+}
 - (id)initWithIdentifier:(id)theIdentifier keyCombo:(SGKeyCombo *)theCombo target:(id)theTarget action:(SEL)theAction {
   if (self = [super init]) {
     self.identifier = theIdentifier;
