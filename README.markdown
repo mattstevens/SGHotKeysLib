@@ -1,4 +1,4 @@
-SGHotKeyLib - Hot Keys For Mac OS X Leopard and beyond
+SGHotKeyLib - Hot Keys For Mac OS X Leopard And Beyond
 =========================
 
 * Maintained by [Justin Williams](http://carpeaqua.com)
