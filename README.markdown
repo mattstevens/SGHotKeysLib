@@ -26,12 +26,23 @@ What's in the box?
 
 SGHotKeysLib includes:
 
-* The SGHotKeySLib itself 
+* The SGHotKeysLib itself 
 * A sample application that demonstrates how it works.  
 
 The sample uses a custom-built version of the [ShortcutRecorder](http://code.google.com/p/shortcutrecorder/) framework to demonstrate setting a hot key.  
 
-Help Me!
+All The Other Stuff
 -------------------------
 
 SGHotKeysLib is a modernization of a piece of code many of us have been using for several years, and I'm sure it could be improved even more.  If you have ideas for how to do that, please fork away. 
+
+Please report [bugs and request features](http://secondgear.lighthouseapp.com/projects/34579-sghotkeyslib/tickets/new) on the [Lighthouse SGHotKeysLib project site](http://secondgear.lighthouseapp.com/projects/34579-sghotkeyslib/tickets?q=all).
+
+---------------------------------------
+
+* **1.1** 
+
+* Added support for traditional retain/release memory management
+* Resolved some compiler warnings that didn't show up in [REDACTED]
+
+* **1.0** Original release
