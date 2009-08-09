@@ -97,7 +97,7 @@ NSString * const kModifiersDictionaryKey = @"modifiers";
 }
 
 + (NSDictionary *)_keyCodesDictionary {
-	static NSDictionary* keyCodes = nil;
+	static NSDictionary *keyCodes = nil;
 	
 	if(keyCodes == nil) {
 		NSString *path;
