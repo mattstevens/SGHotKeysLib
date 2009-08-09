@@ -107,7 +107,7 @@ NSString * const kModifiersDictionaryKey = @"modifiers";
 		path = [[NSBundle bundleForClass:self] pathForResource:@"SGKeyCodes" ofType:@"plist"];
 		contents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     NSAssert(contents != nil, @"Contents of SGKeyCodes is nil");    
-		keyCodes = [contents propertyList];
+		keyCodes = [[contents propertyList] retain];
 	}
 	
 	return keyCodes;
