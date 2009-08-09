@@ -22,7 +22,6 @@
   [identifier release];
   [name release];
   [keyCombo release];
-  [target release];
   [super dealloc];
 }
 
