@@ -13,6 +13,7 @@
 @interface SGHotKeyCenter : NSObject {
   NSMutableDictionary *hotKeys; // Keys are NSValue of EventHotKeyRef
   BOOL eventHandlerInstalled;
+  BOOL hasInited;
 }
 
 + (SGHotKeyCenter *)sharedCenter;

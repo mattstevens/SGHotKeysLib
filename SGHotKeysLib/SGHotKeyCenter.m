@@ -24,28 +24,45 @@ static OSStatus hotKeyEventHandler(EventHandlerCallRef inHandlerRef, EventRef in
 @end
 
 
+static SGHotKeyCenter *sharedCenter = nil;
+
 @implementation SGHotKeyCenter
+
++ (void)initialize {
+	if (!sharedCenter) {
+		sharedCenter = [[self alloc] init];
+	}	
+}
 
 - (void)dealloc {
   [hotKeys release];
   [super dealloc];
 }
 
-+ (SGHotKeyCenter *)sharedCenter {
-  static SGHotKeyCenter *sharedCenter = nil;
-  
-  if (sharedCenter == nil) {
-    sharedCenter = [[self alloc] init];
-  }
-  
++ (SGHotKeyCenter *)sharedCenter {    
   return sharedCenter;
 }
 
-- (id)init {
-  if (self = [super init]) {
-    hotKeys = [[NSMutableDictionary alloc] init];    
++ (id) allocWithZone:(NSZone *)zone {
+  //Usually already set by +initialize.
+  if (sharedCenter) {
+    //The caller expects to receive a new object, so implicitly retain it to balance out the caller's eventual release message.
+    return [sharedCenter retain];
+  } else {
+    //When not already set, +initialize is our caller—it's creating the shared instance. Let this go through.
+    return [super allocWithZone:zone];
   }
-  
+}
+
+- (id) init {
+  if (!hasInited) {
+    if ((self = [super init])) {
+      //Initialize the instance here.
+			hotKeys = [[NSMutableDictionary alloc] init];    
+      hasInited = YES;
+    }
+  }
+	
   return self;
 }
 
