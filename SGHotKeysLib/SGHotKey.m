@@ -60,7 +60,7 @@
   if (theKeyCombo == nil)
     theKeyCombo = [SGKeyCombo clearKeyCombo];
   
-  keyCombo = theKeyCombo;
+  keyCombo = [theKeyCombo retain];
 }
 
 - (NSString *)description {
