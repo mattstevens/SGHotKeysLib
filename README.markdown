@@ -1,7 +1,7 @@
 SGHotKeyLib - Hot Keys For Mac OS X Leopard And Beyond
 =========================
 
-* Maintained by [Justin Williams](http://carpeaqua.com)
+* Maintained by [Justin Williams](http://www.secondgearsoftware.com)
 * Originally by Quentin D. Carnicelli
 
 What is SGHotKeyLib?
