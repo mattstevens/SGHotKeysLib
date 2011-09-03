@@ -84,8 +84,8 @@ static SGHotKeyCenter *sharedCenter = nil;
 	
 	theHotKey.hotKeyID = hotKeyID;
 	
-	error = RegisterEventHotKey(theHotKey.keyCombo.keyCode,
-								theHotKey.keyCombo.modifiers,
+	error = RegisterEventHotKey((UInt32)theHotKey.keyCombo.keyCode,
+								(UInt32)theHotKey.keyCombo.modifiers,
 								hotKeyID,
 								GetEventMonitorTarget(),
 								// GetEventDispatcherTarget(),
