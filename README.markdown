@@ -40,6 +40,10 @@ Please report [bugs and request features](http://secondgear.lighthouseapp.com/pr
 
 ---------------------------------------
 
+* **1.2** 
+
+* Some fixes and changes from the AgileBits crew! 
+
 * **1.1** 
 
   * Added support for traditional retain/release memory management
