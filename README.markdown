@@ -1,7 +1,7 @@
 SGHotKeyLib - Hot Keys For Mac OS X Leopard And Beyond
 =========================
 
-* Maintained by [Justin Williams](http://carpeaqua.com)
+* Maintained by [Justin Williams](http://www.secondgearsoftware.com)
 * Originally by Quentin D. Carnicelli
 
 What is SGHotKeyLib?
@@ -39,6 +39,10 @@ SGHotKeysLib is a modernization of a piece of code many of us have been using fo
 Please report [bugs and request features](http://secondgear.lighthouseapp.com/projects/34579-sghotkeyslib/tickets/new) on the [Lighthouse SGHotKeysLib project site](http://secondgear.lighthouseapp.com/projects/34579-sghotkeyslib/tickets?q=all).
 
 ---------------------------------------
+
+* **1.2** 
+
+* Some fixes and changes from the AgileBits crew! 
 
 * **1.1** 
 
